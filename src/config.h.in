@@ -1,0 +1,12 @@
+#mesondefine USE_LIB_SDL2
+#mesondefine USE_LIB_LIBDRM
+#mesondefine USE_LIB_FUSE3
+#mesondefine USE_LIB_LIBURING
+#mesondefine USE_LIB_LIBPNG
+#mesondefine USE_LIB_LIBJPEG
+#mesondefine USE_LIB_LIBKMOD
+#mesondefine USE_LIB_LIBMOUNT
+#mesondefine USE_LIB_LIBBLKID
+#mesondefine HAVE_LINUX_NBD_H
+#mesondefine HAVE_LINUX_UBLK_CMD_H
+#define NANODISTO_VERSION "@VERSION@"

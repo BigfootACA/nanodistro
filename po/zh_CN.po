@@ -1,0 +1,655 @@
+# Chinese translations for nanodistro package
+# nanodistro 软件包的简体中文翻译.
+# Copyright (C) 2025 BigfootACA <bigfoot@classfun.cn>
+# This file is distributed under the same license as the nanodistro package.
+#  <bigfoot@bigfoot-server-arm-node1>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-09 09:35+0800\n"
+"PO-Revision-Date: 2025-05-07 15:47+0800\n"
+"Last-Translator: BigfootACA <bigfoot@classfun.cn>\n"
+"Language-Team: Chinese (simplified) <bigfoot@classfun.cn>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/ui/hello.cpp:47
+msgid "Welcome to Distro flash wizard"
+msgstr "欢迎使用发行版刷写向导"
+
+#: src/ui/hello.cpp:52
+msgid "Start"
+msgstr "开始"
+
+#: src/ui/hello.cpp:61
+msgid "Reboot"
+msgstr "重启"
+
+#: src/ui/hello.cpp:70
+msgid "Shutdown"
+msgstr "关机"
+
+#: src/ui/network/network.cpp:77 src/ui/choose_image/choose.cpp:36
+#: src/ui/choose_disk/choose.cpp:36 src/ui/progress/buttons.cpp:36
+#: src/ui/confirm.cpp:74
+msgid "Back"
+msgstr "返回"
+
+#: src/ui/network/network.cpp:86
+msgid "Skip"
+msgstr "跳过"
+
+#: src/ui/network/network.cpp:94 src/ui/choose_image/choose.cpp:51
+#: src/ui/choose_disk/choose.cpp:51
+msgid "Next"
+msgstr "下一步"
+
+#: src/ui/network/network.cpp:114
+msgid "Devices"
+msgstr "设备"
+
+#: src/ui/network/network.cpp:116
+msgid "Settings"
+msgstr "设置"
+
+#: src/ui/network/ethernet.cpp:30 src/ui/network/wlan_connect.cpp:393
+#, c-format
+msgid "IPv4 Address: %s\n"
+msgstr "IPv4地址: %s\n"
+
+#: src/ui/network/ethernet.cpp:32 src/ui/network/wlan_connect.cpp:395
+#, c-format
+msgid "IPv4 Gateway: %s\n"
+msgstr "IPv4网关: %s\n"
+
+#: src/ui/network/ethernet.cpp:34 src/ui/network/wlan_connect.cpp:397
+#, c-format
+msgid "IPv6 Address: %s\n"
+msgstr "IPv6地址: %s\n"
+
+#: src/ui/network/ethernet.cpp:36 src/ui/network/wlan_connect.cpp:399
+#, c-format
+msgid "IPv6 Gateway: %s\n"
+msgstr "IPv6网关: %s\n"
+
+#: src/ui/network/ethernet.cpp:44 src/ui/network/wlan_connect.cpp:404
+#, c-format
+msgid "DNS: %s\n"
+msgstr "DNS: %s\n"
+
+#: src/ui/network/ethernet.cpp:54 src/ui/network/wlan.cpp:208
+msgid "Connected"
+msgstr "已连接"
+
+#: src/ui/network/ethernet.cpp:55
+msgid "No cable"
+msgstr "未连接线缆"
+
+#: src/ui/network/ethernet.cpp:56 src/ui/network/wlan.cpp:200
+#: src/ui/network/ip_config.cpp:199
+msgid "Disabled"
+msgstr "禁用"
+
+#: src/ui/network/ethernet.cpp:57 src/ui/network/ethernet.cpp:198
+#: src/ui/network/ethernet.cpp:244
+#, c-format
+msgid "Status: %s"
+msgstr "状态: %s"
+
+#: src/ui/network/ethernet.cpp:160 src/ui/network/wlan_connect.cpp:228
+msgid "IP Config"
+msgstr "IP配置"
+
+#: src/ui/network/ethernet.cpp:167
+msgid "Reconfigure"
+msgstr "重新配置"
+
+#: src/ui/network/ethernet.cpp:198 src/ui/network/ethernet.cpp:244
+#: src/ui/network/wlan.cpp:135
+msgid "Unavailable"
+msgstr "不可用"
+
+#: src/ui/network/ethernet.cpp:221
+#, c-format
+msgid "Ethernet: %s"
+msgstr "以太网: %s"
+
+#: src/ui/network/ethernet.cpp:243
+#, c-format
+msgid "Enable Ethernet %s"
+msgstr "启用以太网: %s"
+
+#: src/ui/network/proxy.cpp:111 src/ui/network/ip_config.cpp:143
+msgid "Apply"
+msgstr "应用"
+
+#: src/ui/network/proxy.cpp:118
+msgid "Clear"
+msgstr "清除"
+
+#: src/ui/network/proxy.cpp:145
+msgid "Setup Proxy"
+msgstr "设置代理"
+
+#: src/ui/network/proxy.cpp:149 src/ui/network/proxy.cpp:154
+msgid "All proxy"
+msgstr "所有代理"
+
+#: src/ui/network/proxy.cpp:158 src/ui/network/proxy.cpp:163
+msgid "FTP proxy"
+msgstr "FTP代理"
+
+#: src/ui/network/proxy.cpp:167 src/ui/network/proxy.cpp:172
+msgid "HTTP proxy"
+msgstr "HTTP代理"
+
+#: src/ui/network/proxy.cpp:176 src/ui/network/proxy.cpp:181
+msgid "HTTPS proxy"
+msgstr "HTTPS代理"
+
+#: src/ui/network/proxy.cpp:185 src/ui/network/proxy.cpp:190
+msgid "Not proxy for"
+msgstr "不对以下代理"
+
+#: src/ui/network/proxy.cpp:197
+msgid "Proxy"
+msgstr "代理"
+
+#: src/ui/network/wlan.cpp:102
+msgid "Connect to hidden network..."
+msgstr "连接到隐藏网络..."
+
+#: src/ui/network/wlan.cpp:167 src/ui/network/wlan.cpp:354
+msgid "Ready"
+msgstr "就绪"
+
+#: src/ui/network/wlan.cpp:199 src/ui/network/wlan.cpp:201
+msgid "Disconnected"
+msgstr "未连接"
+
+#: src/ui/network/wlan.cpp:202
+msgid "Scanning"
+msgstr "扫描中"
+
+#: src/ui/network/wlan.cpp:203
+msgid "Authenticating"
+msgstr "认证中"
+
+#: src/ui/network/wlan.cpp:204
+msgid "Associating"
+msgstr "关联中"
+
+#: src/ui/network/wlan.cpp:205
+msgid "Associated"
+msgstr "已关联"
+
+#: src/ui/network/wlan.cpp:206 src/ui/network/wlan.cpp:207
+msgid "Handshaking"
+msgstr "握手中"
+
+#: src/ui/network/wlan.cpp:209 src/ui/network/wlan_connect.cpp:161
+msgid "Unknown"
+msgstr "未知"
+
+#: src/ui/network/wlan.cpp:333
+#, c-format
+msgid "WLAN: %s"
+msgstr "无线网络: %s"
+
+#: src/ui/network/wlan.cpp:353
+#, c-format
+msgid "Enable WLAN %s"
+msgstr "启用无线网卡 %s"
+
+#: src/ui/network/wlan.cpp:354
+msgid "Initializing"
+msgstr "初始化中"
+
+#: src/ui/network/hello.cpp:36
+msgid ""
+"The distro flash wizard need download some files from internet\n"
+"You need to connect to a network to continue\n"
+"Please connect to a network from the list in left"
+msgstr ""
+"发行版刷写向导需要从互联网下载一些文件\n"
+"你需要连接到网络才能继续\n"
+"请从左侧列表中连接一个网络"
+
+#: src/ui/network/wlan_connect.cpp:47
+msgid "SSID is empty"
+msgstr "SSID未指定"
+
+#: src/ui/network/wlan_connect.cpp:53
+msgid "WPA key must be 8 to 63 characters"
+msgstr "WPA密钥必须在8到63个字符"
+
+#: src/ui/network/wlan_connect.cpp:57
+msgid "Unknown security type"
+msgstr "安全类型"
+
+#: src/ui/network/wlan_connect.cpp:88
+msgid "No password available"
+msgstr "密码不可用"
+
+#: src/ui/network/wlan_connect.cpp:89
+msgid "Connection failed"
+msgstr "链接失败"
+
+#: src/ui/network/wlan_connect.cpp:90
+msgid "Wrong password"
+msgstr "密码错误"
+
+#: src/ui/network/wlan_connect.cpp:91
+msgid "Authentication failed"
+msgstr "认证失败"
+
+#: src/ui/network/wlan_connect.cpp:117 src/ui/network/wlan_connect.cpp:147
+#, c-format
+msgid "Failed to connect to network %s: %s"
+msgstr "连接网络 %s 失败: %s"
+
+#: src/ui/network/wlan_connect.cpp:133
+#, c-format
+msgid "Failed to configure network %s: %s"
+msgstr "配置网络 %s 失败: %s"
+
+#: src/ui/network/wlan_connect.cpp:172
+msgid "Network not found"
+msgstr "未找到网络"
+
+#: src/ui/network/wlan_connect.cpp:192
+msgid "Failed to disconnect from network"
+msgstr "断开网络失败"
+
+#: src/ui/network/wlan_connect.cpp:236
+msgid "Disconnect"
+msgstr "断开"
+
+#: src/ui/network/wlan_connect.cpp:244
+msgid "Connect"
+msgstr "连接"
+
+#: src/ui/network/wlan_connect.cpp:272
+msgid "Connect to WiFi"
+msgstr "连接到WiFi"
+
+#: src/ui/network/wlan_connect.cpp:276 src/ui/network/wlan_connect.cpp:281
+msgid "Network SSID"
+msgstr "网络名称"
+
+#: src/ui/network/wlan_connect.cpp:285
+msgid "Security type"
+msgstr "安全类型"
+
+#: src/ui/network/wlan_connect.cpp:289
+msgid "Open network"
+msgstr "开放网络"
+
+#: src/ui/network/wlan_connect.cpp:290
+msgid "WPA/WPA2/WPA3 Personal PSK"
+msgstr "WPA/WPA2/WPA3个人PSK"
+
+#: src/ui/network/wlan_connect.cpp:299 src/ui/network/wlan_connect.cpp:305
+msgid "Password"
+msgstr "密码"
+
+#: src/ui/network/ip_config.cpp:113
+#, c-format
+msgid "Failed to parse ipconfig: %s"
+msgstr "解析IP配置失败: %s"
+
+#: src/ui/network/ip_config.cpp:150
+msgid "Reload"
+msgstr "重新加载"
+
+#: src/ui/network/ip_config.cpp:157
+msgid "Reset"
+msgstr "重置"
+
+#: src/ui/network/ip_config.cpp:189
+msgid "Configure IP address"
+msgstr "配置IP地址"
+
+#: src/ui/network/ip_config.cpp:193
+msgid "IPv4 Mode"
+msgstr "IPv4模式"
+
+#: src/ui/network/ip_config.cpp:197
+msgid "DHCP"
+msgstr "DHCP自动配置"
+
+#: src/ui/network/ip_config.cpp:198
+msgid "Static"
+msgstr "静态地址"
+
+#: src/ui/network/ip_config.cpp:206 src/ui/network/ip_config.cpp:211
+msgid "IPv4 Address"
+msgstr "IPv4地址"
+
+#: src/ui/network/ip_config.cpp:215 src/ui/network/ip_config.cpp:220
+msgid "IPv4 Netmask"
+msgstr "IPv4子网掩码"
+
+#: src/ui/network/ip_config.cpp:224 src/ui/network/ip_config.cpp:229
+msgid "IPv4 Gateway"
+msgstr "IPv4网关"
+
+#: src/ui/network/ip_config.cpp:233
+msgid "IPv4 Auto configure DNS"
+msgstr "使用自动配置的DNS"
+
+#: src/ui/network/ip_config.cpp:242 src/ui/network/ip_config.cpp:247
+msgid "IPv4 DNS1"
+msgstr "IPv4 DNS1"
+
+#: src/ui/network/ip_config.cpp:251 src/ui/network/ip_config.cpp:256
+msgid "IPv4 DNS2"
+msgstr "IPv4 DNS2"
+
+#: src/ui/network/ip_config.cpp:265
+#, c-format
+msgid "Configure IP address for %s"
+msgstr "为 %s 配置IP地址"
+
+#: src/ui/msgbox.cpp:42 src/ui/inputbox.cpp:96
+msgid "OK"
+msgstr "确认"
+
+#: src/ui/inputbox.cpp:104 src/ui/progress/buttons.cpp:29 src/ui/confirm.cpp:83
+msgid "Cancel"
+msgstr "取消"
+
+#: src/ui/choose_image/choose.cpp:43 src/ui/choose_disk/choose.cpp:43
+msgid "Refresh"
+msgstr "刷新"
+
+#: src/ui/choose_image/choose.cpp:93 src/ui/choose_disk/choose.cpp:92
+msgid "Loading..."
+msgstr "加载中..."
+
+#: src/ui/choose_image/choose.cpp:126
+msgid "Choose image to flash"
+msgstr "选择要刷写的镜像"
+
+#: src/ui/choose_image/load.cpp:13
+msgid "Loading manifest..."
+msgstr "加载清单数据中..."
+
+#: src/ui/choose_image/load.cpp:32
+msgid "Loading devices..."
+msgstr "加载设备数据中..."
+
+#: src/ui/choose_image/load.cpp:58
+msgid "Loading images..."
+msgstr "加载镜像数据中..."
+
+#: src/ui/choose_image/load.cpp:85
+#, c-format
+msgid "Failed to load images: %s"
+msgstr "加载镜像失败: %s"
+
+#: src/ui/choose_image/load.cpp:138
+msgid "No group found"
+msgstr "未找到镜像组"
+
+#: src/ui/choose_image/load.cpp:146
+msgid "No image found"
+msgstr "未找到镜像"
+
+#: src/ui/choose_image/image.cpp:82
+#, c-format
+msgid "Time %s Version %s Size %s"
+msgstr "时间 %s 版本 %s 大小 %s"
+
+#: src/ui/choose_disk/choose.cpp:125
+msgid "Choose disk to flash"
+msgstr "选择要刷写的磁盘"
+
+#: src/ui/choose_disk/choose.cpp:193
+msgid "No disk selected"
+msgstr "未选中磁盘"
+
+#: src/ui/choose_disk/choose.cpp:205
+msgid "No disk found"
+msgstr "未找到磁盘"
+
+#: src/ui/choose_disk/load.cpp:278
+#, c-format
+msgid "One or more disks failed to load: %s"
+msgstr "一个或多个磁盘加载失败: %s"
+
+#: src/ui/choose_disk/load.cpp:295
+#, c-format
+msgid "Failed to retrieve disk list: %s"
+msgstr "加载磁盘列表失败: %s"
+
+#: src/ui/choose_disk/info.cpp:159
+msgid "Disk Size"
+msgstr "磁盘大小"
+
+#: src/ui/choose_disk/info.cpp:160
+msgid "Sector Count"
+msgstr "扇区数量"
+
+#: src/ui/choose_disk/info.cpp:161
+msgid "Sector Size"
+msgstr "扇区大小"
+
+#: src/ui/choose_disk/info.cpp:162
+msgid "Device path"
+msgstr "设备路径"
+
+#: src/ui/choose_disk/info.cpp:163
+msgid "Subsystem"
+msgstr "子系统"
+
+#: src/ui/choose_disk/info.cpp:164
+msgid "Bus"
+msgstr "总线"
+
+#: src/ui/choose_disk/info.cpp:165
+msgid "Protocol"
+msgstr "协议"
+
+#: src/ui/choose_disk/info.cpp:166
+msgid "Media"
+msgstr "媒体"
+
+#: src/ui/choose_disk/info.cpp:167
+msgid "Area"
+msgstr "区域"
+
+#: src/ui/choose_disk/info.cpp:168
+msgid "Vendor"
+msgstr "制造商"
+
+#: src/ui/choose_disk/info.cpp:169
+msgid "Model"
+msgstr "型号"
+
+#: src/ui/choose_disk/info.cpp:170
+msgid "Serial Number"
+msgstr "序列号"
+
+#: src/ui/choose_disk/info.cpp:171
+msgid "WWID"
+msgstr "WWID"
+
+#: src/ui/choose_disk/info.cpp:172
+msgid "USB Port"
+msgstr "USB端口"
+
+#: src/ui/choose_disk/info.cpp:173 src/ui/choose_disk/info.cpp:174
+msgid "USB Speed"
+msgstr "USB速度"
+
+#: src/ui/choose_disk/info.cpp:175
+msgid "USB Version"
+msgstr "USB版本"
+
+#: src/ui/choose_disk/info.cpp:176
+msgid "USB Vendor ID"
+msgstr "USB制造商ID"
+
+#: src/ui/choose_disk/info.cpp:177
+msgid "USB Product ID"
+msgstr "USB产品ID"
+
+#: src/ui/choose_disk/info.cpp:178
+msgid "USB Serial Number"
+msgstr "USB序列号"
+
+#: src/ui/choose_disk/info.cpp:179
+msgid "USB Manufacturer"
+msgstr "USB制造商名"
+
+#: src/ui/choose_disk/info.cpp:180
+msgid "USB Product"
+msgstr "USB产品名"
+
+#: src/ui/choose_disk/info.cpp:181
+msgid "SCSI Host"
+msgstr "SCSI主机"
+
+#: src/ui/choose_disk/info.cpp:182
+msgid "SCSI Channel"
+msgstr "SCSI通道"
+
+#: src/ui/choose_disk/info.cpp:183
+msgid "SCSI ID"
+msgstr "SCSI ID"
+
+#: src/ui/choose_disk/info.cpp:184
+msgid "SCSI LUN"
+msgstr "SCSI LUN"
+
+#: src/ui/choose_disk/info.cpp:185
+msgid "PCIe slot"
+msgstr "PCIe插槽"
+
+#: src/ui/choose_disk/info.cpp:186
+msgid "PCIe lanes"
+msgstr "PCIe通道数量"
+
+#: src/ui/choose_disk/info.cpp:187
+msgid "PCIe lane baudwidth"
+msgstr "PCIe通道带宽"
+
+#: src/ui/choose_disk/info.cpp:188
+msgid "PCIe lane speed"
+msgstr "PCIe通道速度"
+
+#: src/ui/choose_disk/info.cpp:189
+msgid "PCIe total baudwidth"
+msgstr "PCIe总带宽"
+
+#: src/ui/choose_disk/info.cpp:190
+msgid "PCIe total speed"
+msgstr "PCIe总速度"
+
+#: src/ui/choose_disk/info.cpp:191
+msgid "PCIe version"
+msgstr "PCIe版本"
+
+#: src/ui/choose_disk/info.cpp:193
+msgid "Device name"
+msgstr "设备名称"
+
+#: src/ui/choose_disk/info.cpp:194
+msgid "Device node"
+msgstr "设备节点"
+
+#: src/ui/choose_disk/info.cpp:195
+msgid "Device node path"
+msgstr "设备节点路径"
+
+#: src/ui/choose_disk/info.cpp:196
+msgid "Sysfs path"
+msgstr "Sysfs路径"
+
+#: src/ui/progress/draw.cpp:24 src/ui/progress/draw.cpp:126
+msgid "Installing..."
+msgstr "正在安装中..."
+
+#: src/ui/progress/draw.cpp:28
+msgid "Install complete"
+msgstr "安装完成"
+
+#: src/ui/progress/draw.cpp:32
+msgid "Install failed"
+msgstr "安装失败"
+
+#: src/ui/progress/draw.cpp:35
+msgid "Cancelling..."
+msgstr "正在取消中..."
+
+#: src/ui/progress/terminal.cpp:88
+msgid "Starting installer..."
+msgstr "正在启动安装器..."
+
+#: src/ui/progress/buttons.cpp:43
+msgid "Log"
+msgstr "日志"
+
+#: src/ui/progress/thread.cpp:29
+#, c-format
+msgid "[Process %d exited by signal %d]"
+msgstr "[进程 %d 由于信号 %d 退出]"
+
+#: src/ui/progress/thread.cpp:34
+#, c-format
+msgid "[Process %d exited with status %d]"
+msgstr "[进程 %d 以状态 %d 退出]"
+
+#: src/ui/progress/thread.cpp:37
+#, c-format
+msgid "[Process %d exited]"
+msgstr "[进程 %d 退出]"
+
+#: src/ui/progress/thread.cpp:54
+#, c-format
+msgid "[poll failed: %s]"
+msgstr "[轮询失败: %s]"
+
+#: src/ui/confirm.cpp:55
+#, c-format
+msgid ""
+"CAUTION:\n"
+"You are flashing a new image to the disk.\n"
+"The installer may erase all data on the disk.\n"
+"Are you sure you want to continue?\n"
+"Target Disk: %s"
+msgstr ""
+"警告:\n"
+"你正在将新镜像刷写到磁盘\n"
+"安装器可能会擦除磁盘上的所有数据\n"
+"你确定要继续吗?\n"
+"目标磁盘: %s"
+
+#: src/ui/confirm.cpp:65
+msgid "Continue"
+msgstr "继续"
+
+#: src/helper/cmd_write.cpp:224
+#, c-format
+msgid "Writing %s: %s"
+msgstr "正在写入%s: %s"
+
+#: src/helper/cmd_write.cpp:289
+#, c-format
+msgid "Start write %s"
+msgstr "开始写入%s"
+
+#: src/helper/cmd_write.cpp:309
+#, c-format
+msgid "Syncing %s"
+msgstr "正在同步 %s"
+
+#: src/helper/cmd_write.cpp:324
+#, c-format
+msgid "Write %s done"
+msgstr "写入 %s 完成"

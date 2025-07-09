@@ -1,0 +1,98 @@
+nanodistro:
+  locale-dir: builddir/po
+
+  fonts-dir:
+  - /usr/share/fonts
+  - ./assets
+  - .
+  - ../assets
+  fonts:
+    ui-normal:
+    - name: wqy-mono-microhei
+      backend: freetype2
+      size-mode: dpx
+      size: 18
+    ui-small:
+    - name: wqy-mono-microhei
+      backend: freetype2
+      size-mode: dpx
+      size: 14
+    ui-large:
+    - name: wqy-mono-microhei
+      backend: freetype2
+      size-mode: dpx
+      size: 30
+    mdi-normal:
+    - name: mdi
+      backend: freetype2
+      size-mode: dpx
+      size: 18
+    mdi-icon:
+    - name: mdi
+      backend: freetype2
+      size-mode: dpx
+      size: 30
+    mdi-cover:
+    - name: mdi
+      backend: freetype2
+      size-mode: dpx
+      size: 58
+    mdi-large:
+    - name: mdi
+      backend: freetype2
+      size-mode: dpx
+      size: 88
+    term-normal:
+    - name: wqy-mono-microhei
+      backend: freetype2
+      size-mode: dpx
+      size: 14
+    term-bold:
+    - name: wqy-mono-microhei
+      backend: freetype2
+      bold: yes
+      size-mode: dpx
+      size: 14
+    term-italic:
+    - name: wqy-mono-microhei
+      backend: freetype2
+      italic: yes
+      size-mode: dpx
+      size: 14
+    term-bold-italic:
+    - name: wqy-mono-microhei
+      backend: freetype2
+      bold: yes
+      italic: yes
+      size-mode: dpx
+      size: 14
+
+  display:
+    backend: sdl2
+    width: 960
+    height: 540
+
+  input:
+  - backend: sdl2-keyboard
+  - backend: sdl2-mouse
+  - backend: sdl2-mousewheel
+
+  network:
+    enabled: yes
+    wlan:
+      enabled: yes
+      allowed:
+      - wlan1
+      wpa-supplicant:
+        exec: /usr/bin/wpa_supplicant
+        ctrl: /tmp/wpa_supplicant
+    ethernet:
+      enabled: yes
+    proxy:
+      enabled: yes
+
+  server:
+    manifest: http://127.0.0.1:8000/manifest.json
+
+  device:
+    id: test-device0

@@ -1,0 +1,38 @@
+nanodistro_lib_srcs = files([
+	'cgroup.cpp',
+	'command.cpp',
+	'configs.cpp',
+	'error.cpp',
+	'escape.cpp',
+	'event-loop.cpp',
+	'filesystem.cpp',
+	'json.cpp',
+	'libmount.cpp',
+	'logging.cpp',
+	'loop.cpp',
+	'modules.cpp',
+	'paths.cpp',
+	'process.cpp',
+	'readable.cpp',
+	'request.cpp',
+	'status.cpp',
+	'strings.cpp',
+	'time.cpp',
+	'uevent.cpp',
+	'worker.cpp',
+	'url/encode.cpp',
+	'url/generate.cpp',
+	'url/net.cpp',
+	'url/parse.cpp',
+	'url/url.cpp',
+	'url/inline.cpp',
+])
+
+nanodistro_lib = static_library(
+	'nanodistro-lib',
+	nanodistro_lib_srcs,
+	include_directories: nanodistro_inc,
+	c_args: nanodistro_args + nanodistro_c_args,
+	cpp_args: nanodistro_args + nanodistro_cpp_args,
+)
+nanodistro_comps += nanodistro_lib

@@ -1,0 +1,6 @@
+[submodule "libs/lvgl"]
+	path = libs/lvgl
+	url = https://github.com/BigfootACA/lvgl
+[submodule "libs/libtsm"]
+	path = libs/libtsm
+	url = https://github.com/BigfootACA/libtsm
