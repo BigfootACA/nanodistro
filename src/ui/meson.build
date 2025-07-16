@@ -14,6 +14,7 @@ subdir('progress')
 subdir('choose_image')
 subdir('choose_disk')
 subdir('network')
+subdir('mass_storage')
 
 nanodistro_ui = static_library(
 	'nanodistro-ui',
