@@ -129,20 +129,43 @@ void evdev_device::process_rel(input_event&ev){
 void evdev_device::process_keyboard(input_event&ev){
 	uint32_t key=0;
 	if(ev.code==KEY_LEFTSHIFT||ev.code==KEY_RIGHTSHIFT)
-		ctx->key_shift=!ev.value;
+		ctx->key_shift=ev.value;
 	if(ev.code==KEY_LEFTCTRL||ev.code==KEY_RIGHTCTRL)
-		ctx->key_ctrl=!ev.value;
+		ctx->key_ctrl=ev.value;
 	if(ev.code==KEY_LEFTALT||ev.code==KEY_RIGHTALT)
-		ctx->key_alt=!ev.value;
+		ctx->key_alt=ev.value;
 	if(ev.code==KEY_LEFTMETA||ev.code==KEY_RIGHTMETA)
-		ctx->key_meta=!ev.value;
-	if(ev.code>=KEY_A&&ev.code<=KEY_Z){
-		bool upper=false;
-		if(ctx->key_shift)upper=!upper;
-		if(ctx->key_capslock)upper=!upper;
-		key=ev.code-KEY_A+(upper?'A':'a');
-	}
+		ctx->key_meta=ev.value;
+	bool upper=false;
+	if(ctx->key_shift)upper=!upper;
+	if(ctx->key_capslock)upper=!upper;
 	switch(ev.code){
+		case KEY_A:key=upper?'A':'a';break;
+		case KEY_B:key=upper?'B':'b';break;
+		case KEY_C:key=upper?'C':'c';break;
+		case KEY_D:key=upper?'D':'d';break;
+		case KEY_E:key=upper?'E':'e';break;
+		case KEY_F:key=upper?'F':'f';break;
+		case KEY_G:key=upper?'G':'g';break;
+		case KEY_H:key=upper?'H':'h';break;
+		case KEY_I:key=upper?'I':'i';break;
+		case KEY_J:key=upper?'J':'j';break;
+		case KEY_K:key=upper?'K':'k';break;
+		case KEY_L:key=upper?'L':'l';break;
+		case KEY_M:key=upper?'M':'m';break;
+		case KEY_N:key=upper?'N':'n';break;
+		case KEY_O:key=upper?'O':'o';break;
+		case KEY_P:key=upper?'P':'p';break;
+		case KEY_Q:key=upper?'Q':'q';break;
+		case KEY_R:key=upper?'R':'r';break;
+		case KEY_S:key=upper?'S':'s';break;
+		case KEY_T:key=upper?'T':'t';break;
+		case KEY_U:key=upper?'U':'u';break;
+		case KEY_V:key=upper?'V':'v';break;
+		case KEY_W:key=upper?'W':'w';break;
+		case KEY_X:key=upper?'X':'x';break;
+		case KEY_Y:key=upper?'Y':'y';break;
+		case KEY_Z:key=upper?'Z':'z';break;
 		case KEY_GRAVE:key=ctx->key_shift?'~':'`';break;
 		case KEY_1:key=ctx->key_shift?'!':'1';break;
 		case KEY_2:key=ctx->key_shift?'@':'2';break;
