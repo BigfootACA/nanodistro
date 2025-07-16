@@ -2,6 +2,7 @@
 #define FS_UTILS_H
 #include<string>
 #include<vector>
+#include<functional>
 #include<sys/stat.h>
 extern std::string fs_readlink(const std::string&link);
 extern bool fs_exists(const std::string&path);
@@ -30,6 +31,8 @@ extern int xioctl_(int fd,const std::string&name,long request,long arg);
 extern size_t full_read(int fd,void*buf,size_t size);
 extern void io_wait(int fd,int events,int timeout);
 extern void full_write(int fd,const void*buf,size_t size);
+extern void fs_list_dir(const std::string&dir,std::function<bool(const std::string&name,int dt)>cb);
+extern std::vector<std::string>fs_list_dir_all(const std::string&dir);
 template<typename T>T xioctl_get_(int fd,const std::string&name,long request){
 	T arg{};
 	xioctl_(fd,name,request,(long)&arg);

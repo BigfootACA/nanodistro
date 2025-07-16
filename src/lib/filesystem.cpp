@@ -216,3 +216,20 @@ void full_write(int fd,const void*buf,size_t size){
 	}
 	if(off<size)throw RuntimeError("write {} at {} failed",size,off);
 }
+
+void fs_list_dir(const std::string&dir,std::function<bool(const std::string&name,int dt)>cb){
+	DIR*d=opendir(dir.c_str());
+	if(!d)throw ErrnoError("failed to open {}",dir);
+	cleanup_func closer(std::bind(&closedir,d));
+	while(auto e=readdir(d))
+		if(!cb(e->d_name,e->d_type))break;
+}
+
+std::vector<std::string>fs_list_dir_all(const std::string&dir){
+	std::vector<std::string>ret{};
+	fs_list_dir(dir,[&ret](auto name,auto){
+		ret.push_back(name);
+		return true;
+	});
+	return ret;
+}
