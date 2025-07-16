@@ -44,6 +44,10 @@ void msgbox_init(){
 	lv_obj_set_size(mb.btn_ok,LV_SIZE_CONTENT,LV_SIZE_CONTENT);
 	lv_obj_set_grid_cell(mb.btn_ok,LV_GRID_ALIGN_CENTER,0,1,LV_GRID_ALIGN_CENTER,1,1);
 	lv_obj_add_event_func(mb.btn_ok,std::bind(request_close),LV_EVENT_CLICKED);
+
+	lv_obj_update_layout(mb.mask);
+	lv_obj_set_style_max_width(mb.box,lv_obj_get_content_width(mb.mask),0);
+	lv_obj_set_style_max_width(mb.lbl,lv_obj_get_content_width(mb.mask)*3/4,0);
 }
 
 void msgbox_show(const std::string&msg){
