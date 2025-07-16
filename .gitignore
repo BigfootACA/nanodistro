@@ -54,3 +54,4 @@ __pycache__
 /Build
 /edk2
 /local
+!/assets/*.ttf
