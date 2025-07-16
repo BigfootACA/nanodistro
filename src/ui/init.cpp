@@ -35,7 +35,7 @@ int gui_init(){
 	return 0;
 }
 
-void ui_switch_page(const std::string&page){
+void ui_switch_page(const std::string&page,std::any data){
 	for(auto&pg:pages){
 		if(pg.name!=page)continue;
 		current_draw=pg.create();
@@ -48,7 +48,7 @@ void ui_switch_page(const std::string&page){
 		lv_obj_set_style_radius(current_page,0,0);
 		lv_obj_set_size(current_page,lv_pct(100),lv_pct(100));
 		lv_obj_center(current_page);
-		current_draw->draw(current_page);
+		current_draw->draw(current_page,data);
 		return;
 	}
 	log_error("page {} not found",page);
