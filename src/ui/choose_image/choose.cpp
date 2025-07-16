@@ -2,6 +2,7 @@
 #include"configs.h"
 #include"worker.h"
 #include"log.h"
+#include"../context.h"
 
 std::shared_ptr<ui_draw>ui_create_choose_image(){
 	return std::make_shared<ui_draw_choose_image>();
@@ -60,7 +61,14 @@ void ui_draw_choose_image::btn_next_cb(lv_event_t*){
 	if(!selected_image)return;
 	installer_context["images-url"]=images_url.to_string();
 	installer_context["image"]=selected_image->data;
-	ui_switch_page("choose-disk");
+	auto ctx=std::make_shared<disk_context>();
+	ctx->title=_("Choose disk to flash");
+	ctx->back_page="choose-image";
+	ctx->next_page="confirm";
+	ctx->callback=[](auto disk){
+		installer_context["disk"]=disk;
+	};
+	ui_switch_page("choose-disk",ctx);
 }
 
 void ui_draw_choose_image::btn_back_cb(lv_event_t*){
