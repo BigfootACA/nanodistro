@@ -5,6 +5,7 @@
 #include<map>
 #include<json/json.h>
 #include<sys/stat.h>
+#include"../context.h"
 
 struct disk_item{
 	std::string devname{};
@@ -34,7 +35,7 @@ struct disk_gui_item{
 class ui_draw_choose_disk:public ui_draw{
 	public:
 		~ui_draw_choose_disk();
-		void draw(lv_obj_t*cont)override;
+		void draw(lv_obj_t*cont,std::any data)override;
 		void draw_buttons(lv_obj_t*cont);
 		void draw_spinner(lv_obj_t*cont);
 		void set_spinner(bool show);
@@ -78,6 +79,7 @@ class ui_draw_choose_disk:public ui_draw{
 		std::list<std::shared_ptr<disk_gui_item>>disks{};
 		std::list<std::shared_ptr<disk_item>>data_disks{};
 		std::shared_ptr<disk_gui_item>selected_disk=nullptr;
+		std::shared_ptr<disk_context>context=nullptr;
 };
 
 #endif

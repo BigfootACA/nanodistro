@@ -1,6 +1,7 @@
 #include"internal.h"
 #include"configs.h"
 #include"worker.h"
+#include"error.h"
 #include"log.h"
 
 std::shared_ptr<ui_draw>ui_create_choose_disk(){
@@ -58,12 +59,14 @@ void ui_draw_choose_disk::btn_refresh_cb(lv_event_t*){
 
 void ui_draw_choose_disk::btn_next_cb(lv_event_t*){
 	if(!selected_disk)return;
-	installer_context["disk"]=selected_disk->item->to_json();
-	ui_switch_page("confirm");
+	auto disk=selected_disk->item->to_json();
+	if(context->callback)
+		context->callback(disk);
+	ui_switch_page(context->next_page);
 }
 
 void ui_draw_choose_disk::btn_back_cb(lv_event_t*){
-	ui_switch_page("choose-image");
+	ui_switch_page(context->back_page);
 }
 
 void ui_draw_choose_disk::draw_spinner(lv_obj_t*cont){
@@ -107,7 +110,9 @@ void ui_draw_choose_disk::set_spinner(bool show){
 	lv_obj_set_disabled(btn_next,show||!selected_disk);
 }
 
-void ui_draw_choose_disk::draw(lv_obj_t*cont){
+void ui_draw_choose_disk::draw(lv_obj_t*cont,std::any data){
+	context=std::any_cast<std::shared_ptr<disk_context>>(data);
+	if(!context)throw RuntimeError("data is not set");
 	static lv_coord_t grid_cols[]={
 		LV_GRID_FR(4),
 		LV_GRID_FR(6),
@@ -122,7 +127,7 @@ void ui_draw_choose_disk::draw(lv_obj_t*cont){
 
 	auto lbl_title=lv_label_create(cont);
 	lv_obj_set_style_text_align(lbl_title,LV_TEXT_ALIGN_CENTER,0);
-	lv_label_set_text(lbl_title,_("Choose disk to flash"));
+	lv_label_set_text(lbl_title,context->title.c_str());
 	lv_obj_set_grid_cell(lbl_title,LV_GRID_ALIGN_CENTER,0,2,LV_GRID_ALIGN_CENTER,0,1);
 
 	lst_disk=lv_list_create(cont);
