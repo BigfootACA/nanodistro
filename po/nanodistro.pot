@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-09 09:35+0800\n"
+"POT-Creation-Date: 2025-07-16 16:24+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,35 +17,457 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/ui/hello.cpp:47
+#: src/helper/cmd_write.cpp:224
+#, c-format
+msgid "Writing %s: %s"
+msgstr ""
+
+#: src/helper/cmd_write.cpp:289
+#, c-format
+msgid "Start write %s"
+msgstr ""
+
+#: src/helper/cmd_write.cpp:309
+#, c-format
+msgid "Syncing %s"
+msgstr ""
+
+#: src/helper/cmd_write.cpp:324
+#, c-format
+msgid "Write %s done"
+msgstr ""
+
+#: src/ui/inputbox.cpp:96 src/ui/msgbox.cpp:42
+msgid "OK"
+msgstr ""
+
+#: src/ui/inputbox.cpp:104 src/ui/progress/buttons.cpp:29 src/ui/confirm.cpp:83
+msgid "Cancel"
+msgstr ""
+
+#: src/ui/hello.cpp:59
 msgid "Welcome to Distro flash wizard"
 msgstr ""
 
-#: src/ui/hello.cpp:52
+#: src/ui/hello.cpp:64 src/ui/mass_storage/draw.cpp:169
 msgid "Start"
 msgstr ""
 
-#: src/ui/hello.cpp:61
+#: src/ui/hello.cpp:73
+msgid "USB Mass Storage"
+msgstr ""
+
+#: src/ui/hello.cpp:82
+msgid "Terminal"
+msgstr ""
+
+#: src/ui/hello.cpp:91
 msgid "Reboot"
 msgstr ""
 
-#: src/ui/hello.cpp:70
+#: src/ui/hello.cpp:100
 msgid "Shutdown"
 msgstr ""
 
-#: src/ui/network/network.cpp:77 src/ui/choose_image/choose.cpp:36
-#: src/ui/choose_disk/choose.cpp:36 src/ui/progress/buttons.cpp:36
-#: src/ui/confirm.cpp:74
+#: src/ui/progress/buttons.cpp:36 src/ui/confirm.cpp:74
+#: src/ui/mass_storage/draw.cpp:161 src/ui/choose_image/choose.cpp:37
+#: src/ui/choose_disk/choose.cpp:37 src/ui/network/network.cpp:77
 msgid "Back"
+msgstr ""
+
+#: src/ui/progress/buttons.cpp:43
+msgid "Log"
+msgstr ""
+
+#: src/ui/progress/thread.cpp:29
+#, c-format
+msgid "[Process %d exited by signal %d]"
+msgstr ""
+
+#: src/ui/progress/thread.cpp:34
+#, c-format
+msgid "[Process %d exited with status %d]"
+msgstr ""
+
+#: src/ui/progress/thread.cpp:37
+#, c-format
+msgid "[Process %d exited]"
+msgstr ""
+
+#: src/ui/progress/thread.cpp:54
+#, c-format
+msgid "[poll failed: %s]"
+msgstr ""
+
+#: src/ui/progress/terminal.cpp:88
+msgid "Starting installer..."
+msgstr ""
+
+#: src/ui/progress/draw.cpp:24 src/ui/progress/draw.cpp:126
+msgid "Installing..."
+msgstr ""
+
+#: src/ui/progress/draw.cpp:28
+msgid "Install complete"
+msgstr ""
+
+#: src/ui/progress/draw.cpp:32
+msgid "Install failed"
+msgstr ""
+
+#: src/ui/progress/draw.cpp:35
+msgid "Cancelling..."
+msgstr ""
+
+#: src/ui/confirm.cpp:55
+#, c-format
+msgid ""
+"CAUTION:\n"
+"You are flashing a new image to the disk.\n"
+"The installer may erase all data on the disk.\n"
+"Are you sure you want to continue?\n"
+"Target Disk: %s"
+msgstr ""
+
+#: src/ui/confirm.cpp:65
+msgid "Continue"
+msgstr ""
+
+#: src/ui/mass_storage/load.cpp:105
+msgid "(None)"
+msgstr ""
+
+#: src/ui/mass_storage/load.cpp:153
+msgid "Devices to mount"
+msgstr ""
+
+#: src/ui/mass_storage/running.cpp:55
+msgid "Stop"
+msgstr ""
+
+#: src/ui/mass_storage/running.cpp:57
+msgid "Starting..."
+msgstr ""
+
+#: src/ui/mass_storage/running.cpp:62
+msgid "Stopping..."
+msgstr ""
+
+#: src/ui/mass_storage/running.cpp:81
+msgid "Failed to start USB mass storage"
+msgstr ""
+
+#: src/ui/mass_storage/running.cpp:87
+msgid "USB Mass Storage running"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:38 src/ui/network/ip_config.cpp:157
+msgid "Reset"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:46
+msgid "Remove"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:53 src/ui/network/proxy.cpp:118
+msgid "Clear"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:60
+msgid "Add"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:88
+msgid "USB Controller"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:106
+msgid "Storage Mode"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:113
+msgid "USB Attached SCSI (UAS)"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:114
+msgid "USB Mass Storage (UMS)"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:117
+msgid "Use multiple LUN instead of multiple function"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:121
+msgid "Use SCSI direct access"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:125
+msgid "Read-only mode"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:213
+msgid "Select disk to mount"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:221
+#, c-format
+msgid "Disk %s is busy, please unmount it first"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:233
+msgid "No disks to mount"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:235
+msgid "Please select USB controller"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:240
+msgid "USB Attached SCSI does not support read-only mode"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:242
+msgid "USB Attached SCSI must use multiple LUN mode"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:246
+msgid "USB Mass Storage does not support SCSI direct mode"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:248
+msgid "Unknown storage mode"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:287
+msgid "Mount options"
+msgstr ""
+
+#: src/ui/mass_storage/draw.cpp:370
+msgid "No any disk added"
+msgstr ""
+
+#: src/ui/choose_image/image.cpp:82
+#, c-format
+msgid "Time %s Version %s Size %s"
+msgstr ""
+
+#: src/ui/choose_image/choose.cpp:44 src/ui/choose_disk/choose.cpp:44
+msgid "Refresh"
+msgstr ""
+
+#: src/ui/choose_image/choose.cpp:52 src/ui/choose_disk/choose.cpp:52
+#: src/ui/network/network.cpp:94
+msgid "Next"
+msgstr ""
+
+#: src/ui/choose_image/choose.cpp:65
+msgid "Choose disk to flash"
+msgstr ""
+
+#: src/ui/choose_image/choose.cpp:101 src/ui/choose_disk/choose.cpp:95
+msgid "Loading..."
+msgstr ""
+
+#: src/ui/choose_image/choose.cpp:134
+msgid "Choose image to flash"
+msgstr ""
+
+#: src/ui/choose_image/load.cpp:13
+msgid "Loading manifest..."
+msgstr ""
+
+#: src/ui/choose_image/load.cpp:32
+msgid "Loading devices..."
+msgstr ""
+
+#: src/ui/choose_image/load.cpp:58
+msgid "Loading images..."
+msgstr ""
+
+#: src/ui/choose_image/load.cpp:85
+#, c-format
+msgid "Failed to load images: %s"
+msgstr ""
+
+#: src/ui/choose_image/load.cpp:138
+msgid "No group found"
+msgstr ""
+
+#: src/ui/choose_image/load.cpp:146
+msgid "No image found"
+msgstr ""
+
+#: src/ui/choose_disk/choose.cpp:198
+msgid "No disk selected"
+msgstr ""
+
+#: src/ui/choose_disk/choose.cpp:210
+msgid "No disk found"
+msgstr ""
+
+#: src/ui/choose_disk/load.cpp:278
+#, c-format
+msgid "One or more disks failed to load: %s"
+msgstr ""
+
+#: src/ui/choose_disk/load.cpp:295
+#, c-format
+msgid "Failed to retrieve disk list: %s"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:160
+msgid "Disk Size"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:161
+msgid "Sector Count"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:162
+msgid "Sector Size"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:163
+msgid "Device path"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:164
+msgid "Subsystem"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:165
+msgid "Bus"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:166
+msgid "Protocol"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:167
+msgid "Media"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:168
+msgid "Area"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:169
+msgid "Vendor"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:170
+msgid "Model"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:171
+msgid "Serial Number"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:172
+msgid "WWID"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:173
+msgid "USB Port"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:174 src/ui/choose_disk/info.cpp:175
+msgid "USB Speed"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:176
+msgid "USB Version"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:177
+msgid "USB Vendor ID"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:178
+msgid "USB Product ID"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:179
+msgid "USB Serial Number"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:180
+msgid "USB Manufacturer"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:181
+msgid "USB Product"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:182
+msgid "SCSI Host"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:183
+msgid "SCSI Channel"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:184
+msgid "SCSI ID"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:185
+msgid "SCSI LUN"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:186
+msgid "PCIe slot"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:187
+msgid "PCIe lanes"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:188
+msgid "PCIe lane baudwidth"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:189
+msgid "PCIe lane speed"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:190
+msgid "PCIe total baudwidth"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:191
+msgid "PCIe total speed"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:192
+msgid "PCIe version"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:194
+msgid "Device name"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:195
+msgid "Device node"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:196
+msgid "Device node path"
+msgstr ""
+
+#: src/ui/choose_disk/info.cpp:197
+msgid "Sysfs path"
+msgstr ""
+
+#: src/ui/network/hello.cpp:36
+msgid ""
+"The distro flash wizard need download some files from internet\n"
+"You need to connect to a network to continue\n"
+"Please connect to a network from the list in left"
 msgstr ""
 
 #: src/ui/network/network.cpp:86
 msgid "Skip"
-msgstr ""
-
-#: src/ui/network/network.cpp:94 src/ui/choose_image/choose.cpp:51
-#: src/ui/choose_disk/choose.cpp:51
-msgid "Next"
 msgstr ""
 
 #: src/ui/network/network.cpp:114
@@ -56,79 +478,8 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: src/ui/network/ethernet.cpp:30 src/ui/network/wlan_connect.cpp:393
-#, c-format
-msgid "IPv4 Address: %s\n"
-msgstr ""
-
-#: src/ui/network/ethernet.cpp:32 src/ui/network/wlan_connect.cpp:395
-#, c-format
-msgid "IPv4 Gateway: %s\n"
-msgstr ""
-
-#: src/ui/network/ethernet.cpp:34 src/ui/network/wlan_connect.cpp:397
-#, c-format
-msgid "IPv6 Address: %s\n"
-msgstr ""
-
-#: src/ui/network/ethernet.cpp:36 src/ui/network/wlan_connect.cpp:399
-#, c-format
-msgid "IPv6 Gateway: %s\n"
-msgstr ""
-
-#: src/ui/network/ethernet.cpp:44 src/ui/network/wlan_connect.cpp:404
-#, c-format
-msgid "DNS: %s\n"
-msgstr ""
-
-#: src/ui/network/ethernet.cpp:54 src/ui/network/wlan.cpp:208
-msgid "Connected"
-msgstr ""
-
-#: src/ui/network/ethernet.cpp:55
-msgid "No cable"
-msgstr ""
-
-#: src/ui/network/ethernet.cpp:56 src/ui/network/wlan.cpp:200
-#: src/ui/network/ip_config.cpp:199
-msgid "Disabled"
-msgstr ""
-
-#: src/ui/network/ethernet.cpp:57 src/ui/network/ethernet.cpp:198
-#: src/ui/network/ethernet.cpp:244
-#, c-format
-msgid "Status: %s"
-msgstr ""
-
-#: src/ui/network/ethernet.cpp:160 src/ui/network/wlan_connect.cpp:228
-msgid "IP Config"
-msgstr ""
-
-#: src/ui/network/ethernet.cpp:167
-msgid "Reconfigure"
-msgstr ""
-
-#: src/ui/network/ethernet.cpp:198 src/ui/network/ethernet.cpp:244
-#: src/ui/network/wlan.cpp:135
-msgid "Unavailable"
-msgstr ""
-
-#: src/ui/network/ethernet.cpp:221
-#, c-format
-msgid "Ethernet: %s"
-msgstr ""
-
-#: src/ui/network/ethernet.cpp:243
-#, c-format
-msgid "Enable Ethernet %s"
-msgstr ""
-
 #: src/ui/network/proxy.cpp:111 src/ui/network/ip_config.cpp:143
 msgid "Apply"
-msgstr ""
-
-#: src/ui/network/proxy.cpp:118
-msgid "Clear"
 msgstr ""
 
 #: src/ui/network/proxy.cpp:145
@@ -157,63 +508,6 @@ msgstr ""
 
 #: src/ui/network/proxy.cpp:197
 msgid "Proxy"
-msgstr ""
-
-#: src/ui/network/wlan.cpp:102
-msgid "Connect to hidden network..."
-msgstr ""
-
-#: src/ui/network/wlan.cpp:167 src/ui/network/wlan.cpp:354
-msgid "Ready"
-msgstr ""
-
-#: src/ui/network/wlan.cpp:199 src/ui/network/wlan.cpp:201
-msgid "Disconnected"
-msgstr ""
-
-#: src/ui/network/wlan.cpp:202
-msgid "Scanning"
-msgstr ""
-
-#: src/ui/network/wlan.cpp:203
-msgid "Authenticating"
-msgstr ""
-
-#: src/ui/network/wlan.cpp:204
-msgid "Associating"
-msgstr ""
-
-#: src/ui/network/wlan.cpp:205
-msgid "Associated"
-msgstr ""
-
-#: src/ui/network/wlan.cpp:206 src/ui/network/wlan.cpp:207
-msgid "Handshaking"
-msgstr ""
-
-#: src/ui/network/wlan.cpp:209 src/ui/network/wlan_connect.cpp:161
-msgid "Unknown"
-msgstr ""
-
-#: src/ui/network/wlan.cpp:333
-#, c-format
-msgid "WLAN: %s"
-msgstr ""
-
-#: src/ui/network/wlan.cpp:353
-#, c-format
-msgid "Enable WLAN %s"
-msgstr ""
-
-#: src/ui/network/wlan.cpp:354
-msgid "Initializing"
-msgstr ""
-
-#: src/ui/network/hello.cpp:36
-msgid ""
-"The distro flash wizard need download some files from internet\n"
-"You need to connect to a network to continue\n"
-"Please connect to a network from the list in left"
 msgstr ""
 
 #: src/ui/network/wlan_connect.cpp:47
@@ -254,12 +548,20 @@ msgstr ""
 msgid "Failed to configure network %s: %s"
 msgstr ""
 
+#: src/ui/network/wlan_connect.cpp:161 src/ui/network/wlan.cpp:209
+msgid "Unknown"
+msgstr ""
+
 #: src/ui/network/wlan_connect.cpp:172
 msgid "Network not found"
 msgstr ""
 
 #: src/ui/network/wlan_connect.cpp:192
 msgid "Failed to disconnect from network"
+msgstr ""
+
+#: src/ui/network/wlan_connect.cpp:228 src/ui/network/ethernet.cpp:160
+msgid "IP Config"
 msgstr ""
 
 #: src/ui/network/wlan_connect.cpp:236
@@ -294,6 +596,91 @@ msgstr ""
 msgid "Password"
 msgstr ""
 
+#: src/ui/network/wlan_connect.cpp:393 src/ui/network/ethernet.cpp:30
+#, c-format
+msgid "IPv4 Address: %s\n"
+msgstr ""
+
+#: src/ui/network/wlan_connect.cpp:395 src/ui/network/ethernet.cpp:32
+#, c-format
+msgid "IPv4 Gateway: %s\n"
+msgstr ""
+
+#: src/ui/network/wlan_connect.cpp:397 src/ui/network/ethernet.cpp:34
+#, c-format
+msgid "IPv6 Address: %s\n"
+msgstr ""
+
+#: src/ui/network/wlan_connect.cpp:399 src/ui/network/ethernet.cpp:36
+#, c-format
+msgid "IPv6 Gateway: %s\n"
+msgstr ""
+
+#: src/ui/network/wlan_connect.cpp:404 src/ui/network/ethernet.cpp:44
+#, c-format
+msgid "DNS: %s\n"
+msgstr ""
+
+#: src/ui/network/wlan.cpp:102
+msgid "Connect to hidden network..."
+msgstr ""
+
+#: src/ui/network/wlan.cpp:135 src/ui/network/ethernet.cpp:198
+#: src/ui/network/ethernet.cpp:244
+msgid "Unavailable"
+msgstr ""
+
+#: src/ui/network/wlan.cpp:167 src/ui/network/wlan.cpp:354
+msgid "Ready"
+msgstr ""
+
+#: src/ui/network/wlan.cpp:199 src/ui/network/wlan.cpp:201
+msgid "Disconnected"
+msgstr ""
+
+#: src/ui/network/wlan.cpp:200 src/ui/network/ip_config.cpp:199
+#: src/ui/network/ethernet.cpp:56
+msgid "Disabled"
+msgstr ""
+
+#: src/ui/network/wlan.cpp:202
+msgid "Scanning"
+msgstr ""
+
+#: src/ui/network/wlan.cpp:203
+msgid "Authenticating"
+msgstr ""
+
+#: src/ui/network/wlan.cpp:204
+msgid "Associating"
+msgstr ""
+
+#: src/ui/network/wlan.cpp:205
+msgid "Associated"
+msgstr ""
+
+#: src/ui/network/wlan.cpp:206 src/ui/network/wlan.cpp:207
+msgid "Handshaking"
+msgstr ""
+
+#: src/ui/network/wlan.cpp:208 src/ui/network/ethernet.cpp:54
+msgid "Connected"
+msgstr ""
+
+#: src/ui/network/wlan.cpp:333
+#, c-format
+msgid "WLAN: %s"
+msgstr ""
+
+#: src/ui/network/wlan.cpp:353
+#, c-format
+msgid "Enable WLAN %s"
+msgstr ""
+
+#: src/ui/network/wlan.cpp:354
+msgid "Initializing"
+msgstr ""
+
 #: src/ui/network/ip_config.cpp:113
 #, c-format
 msgid "Failed to parse ipconfig: %s"
@@ -301,10 +688,6 @@ msgstr ""
 
 #: src/ui/network/ip_config.cpp:150
 msgid "Reload"
-msgstr ""
-
-#: src/ui/network/ip_config.cpp:157
-msgid "Reset"
 msgstr ""
 
 #: src/ui/network/ip_config.cpp:189
@@ -352,296 +735,26 @@ msgstr ""
 msgid "Configure IP address for %s"
 msgstr ""
 
-#: src/ui/msgbox.cpp:42 src/ui/inputbox.cpp:96
-msgid "OK"
+#: src/ui/network/ethernet.cpp:55
+msgid "No cable"
 msgstr ""
 
-#: src/ui/inputbox.cpp:104 src/ui/progress/buttons.cpp:29 src/ui/confirm.cpp:83
-msgid "Cancel"
-msgstr ""
-
-#: src/ui/choose_image/choose.cpp:43 src/ui/choose_disk/choose.cpp:43
-msgid "Refresh"
-msgstr ""
-
-#: src/ui/choose_image/choose.cpp:93 src/ui/choose_disk/choose.cpp:92
-msgid "Loading..."
-msgstr ""
-
-#: src/ui/choose_image/choose.cpp:126
-msgid "Choose image to flash"
-msgstr ""
-
-#: src/ui/choose_image/load.cpp:13
-msgid "Loading manifest..."
-msgstr ""
-
-#: src/ui/choose_image/load.cpp:32
-msgid "Loading devices..."
-msgstr ""
-
-#: src/ui/choose_image/load.cpp:58
-msgid "Loading images..."
-msgstr ""
-
-#: src/ui/choose_image/load.cpp:85
+#: src/ui/network/ethernet.cpp:57 src/ui/network/ethernet.cpp:198
+#: src/ui/network/ethernet.cpp:244
 #, c-format
-msgid "Failed to load images: %s"
+msgid "Status: %s"
 msgstr ""
 
-#: src/ui/choose_image/load.cpp:138
-msgid "No group found"
+#: src/ui/network/ethernet.cpp:167
+msgid "Reconfigure"
 msgstr ""
 
-#: src/ui/choose_image/load.cpp:146
-msgid "No image found"
-msgstr ""
-
-#: src/ui/choose_image/image.cpp:82
+#: src/ui/network/ethernet.cpp:221
 #, c-format
-msgid "Time %s Version %s Size %s"
+msgid "Ethernet: %s"
 msgstr ""
 
-#: src/ui/choose_disk/choose.cpp:125
-msgid "Choose disk to flash"
-msgstr ""
-
-#: src/ui/choose_disk/choose.cpp:193
-msgid "No disk selected"
-msgstr ""
-
-#: src/ui/choose_disk/choose.cpp:205
-msgid "No disk found"
-msgstr ""
-
-#: src/ui/choose_disk/load.cpp:278
+#: src/ui/network/ethernet.cpp:243
 #, c-format
-msgid "One or more disks failed to load: %s"
-msgstr ""
-
-#: src/ui/choose_disk/load.cpp:295
-#, c-format
-msgid "Failed to retrieve disk list: %s"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:159
-msgid "Disk Size"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:160
-msgid "Sector Count"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:161
-msgid "Sector Size"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:162
-msgid "Device path"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:163
-msgid "Subsystem"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:164
-msgid "Bus"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:165
-msgid "Protocol"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:166
-msgid "Media"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:167
-msgid "Area"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:168
-msgid "Vendor"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:169
-msgid "Model"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:170
-msgid "Serial Number"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:171
-msgid "WWID"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:172
-msgid "USB Port"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:173 src/ui/choose_disk/info.cpp:174
-msgid "USB Speed"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:175
-msgid "USB Version"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:176
-msgid "USB Vendor ID"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:177
-msgid "USB Product ID"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:178
-msgid "USB Serial Number"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:179
-msgid "USB Manufacturer"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:180
-msgid "USB Product"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:181
-msgid "SCSI Host"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:182
-msgid "SCSI Channel"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:183
-msgid "SCSI ID"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:184
-msgid "SCSI LUN"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:185
-msgid "PCIe slot"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:186
-msgid "PCIe lanes"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:187
-msgid "PCIe lane baudwidth"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:188
-msgid "PCIe lane speed"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:189
-msgid "PCIe total baudwidth"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:190
-msgid "PCIe total speed"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:191
-msgid "PCIe version"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:193
-msgid "Device name"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:194
-msgid "Device node"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:195
-msgid "Device node path"
-msgstr ""
-
-#: src/ui/choose_disk/info.cpp:196
-msgid "Sysfs path"
-msgstr ""
-
-#: src/ui/progress/draw.cpp:24 src/ui/progress/draw.cpp:126
-msgid "Installing..."
-msgstr ""
-
-#: src/ui/progress/draw.cpp:28
-msgid "Install complete"
-msgstr ""
-
-#: src/ui/progress/draw.cpp:32
-msgid "Install failed"
-msgstr ""
-
-#: src/ui/progress/draw.cpp:35
-msgid "Cancelling..."
-msgstr ""
-
-#: src/ui/progress/terminal.cpp:88
-msgid "Starting installer..."
-msgstr ""
-
-#: src/ui/progress/buttons.cpp:43
-msgid "Log"
-msgstr ""
-
-#: src/ui/progress/thread.cpp:29
-#, c-format
-msgid "[Process %d exited by signal %d]"
-msgstr ""
-
-#: src/ui/progress/thread.cpp:34
-#, c-format
-msgid "[Process %d exited with status %d]"
-msgstr ""
-
-#: src/ui/progress/thread.cpp:37
-#, c-format
-msgid "[Process %d exited]"
-msgstr ""
-
-#: src/ui/progress/thread.cpp:54
-#, c-format
-msgid "[poll failed: %s]"
-msgstr ""
-
-#: src/ui/confirm.cpp:55
-#, c-format
-msgid ""
-"CAUTION:\n"
-"You are flashing a new image to the disk.\n"
-"The installer may erase all data on the disk.\n"
-"Are you sure you want to continue?\n"
-"Target Disk: %s"
-msgstr ""
-
-#: src/ui/confirm.cpp:65
-msgid "Continue"
-msgstr ""
-
-#: src/helper/cmd_write.cpp:224
-#, c-format
-msgid "Writing %s: %s"
-msgstr ""
-
-#: src/helper/cmd_write.cpp:289
-#, c-format
-msgid "Start write %s"
-msgstr ""
-
-#: src/helper/cmd_write.cpp:309
-#, c-format
-msgid "Syncing %s"
-msgstr ""
-
-#: src/helper/cmd_write.cpp:324
-#, c-format
-msgid "Write %s done"
+msgid "Enable Ethernet %s"
 msgstr ""
