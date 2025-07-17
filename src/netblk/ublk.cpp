@@ -262,6 +262,10 @@ void netblk_device_ublk::init(){
 	backend->prefetch(0,max_io);
 	add();
 	auto path=std::format("{}{}",CDEVPATH,dev_info.dev_id);
+	for(int i=0;i<100;i++){
+		if(fs_exists(path))break;
+		usleep(10000);
+	}
 	blk_fd=open(path.c_str(),O_RDWR|O_CLOEXEC);
 	if(blk_fd<0)throw ErrnoError("failed to open {}",path);
 	queues.resize(dev_info.nr_hw_queues);
