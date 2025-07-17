@@ -4,6 +4,13 @@
 #include"error.h"
 #include"std-utils.h"
 
+#ifndef PR_SET_VMA
+#define PR_SET_VMA 0x53564d41
+#endif
+#ifndef PR_SET_VMA_ANON_NAME
+#define PR_SET_VMA_ANON_NAME 0
+#endif
+
 void block_cache::force_cache_sector_(sector_t offset,sector_t count){
 	if(!mem)throw RuntimeError("not initialized");
 	if(offset+count>total_sectors)throw RuntimeError("cache out of range");

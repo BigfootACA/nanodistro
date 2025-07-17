@@ -15,6 +15,13 @@
 #include"error.h"
 #include"gui.h"
 
+#ifndef PR_SET_VMA
+#define PR_SET_VMA 0x53564d41
+#endif
+#ifndef PR_SET_VMA_ANON_NAME
+#define PR_SET_VMA_ANON_NAME 0
+#endif
+
 #if LV_COLOR_DEPTH == 32
 #define DRM_FOURCC DRM_FORMAT_XRGB8888
 #elif LV_COLOR_DEPTH == 16

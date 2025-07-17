@@ -16,6 +16,13 @@
 #include"modules.h"
 #include"error.h"
 
+#ifndef PR_SET_VMA
+#define PR_SET_VMA 0x53564d41
+#endif
+#ifndef PR_SET_VMA_ANON_NAME
+#define PR_SET_VMA_ANON_NAME 0
+#endif
+
 #define CTRL "/dev/ublk-control"
 #define BDEVNAME "ublkb"
 #define CDEVNAME "ublkc"

@@ -16,6 +16,13 @@
 #include"error.h"
 #include"gui.h"
 
+#ifndef PR_SET_VMA
+#define PR_SET_VMA 0x53564d41
+#endif
+#ifndef PR_SET_VMA_ANON_NAME
+#define PR_SET_VMA_ANON_NAME 0
+#endif
+
 class fbdev_display{
 	public:
 		~fbdev_display();
