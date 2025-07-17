@@ -4,6 +4,7 @@
 #include"internal.h"
 #include"readable.h"
 #include"request.h"
+#include"configs.h"
 #include"error.h"
 
 class netblk_backend_curl;
@@ -130,6 +131,8 @@ void netblk_backend_curl::fill_opt(CURL*curl){
 	curl_easy_setopt(curl,CURLOPT_TCP_KEEPIDLE,300L);
 	curl_easy_setopt(curl,CURLOPT_TCP_KEEPINTVL,20L);
 	curl_easy_setopt(curl,CURLOPT_HTTPHEADER,headers);
+	if(auto v=config["nanodistro"]["network"]["cacert"])
+		curl_easy_setopt(curl,CURLOPT_CAINFO,v.as<std::string>().c_str());
 }
 
 netblk_backend_curl::~netblk_backend_curl(){

@@ -79,6 +79,7 @@ nanodistro:
 
   network:
     enabled: yes
+    cacert: /etc/ssl/certs/ca-certificates.crt
     wlan:
       enabled: yes
       allowed:

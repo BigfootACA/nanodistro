@@ -3,6 +3,7 @@
 #include"readable.h"
 #include"cleanup.h"
 #include"request.h"
+#include"configs.h"
 #include"error.h"
 #include"log.h"
 
@@ -61,6 +62,8 @@ std::string request_get_data(const url&u){
 	curl_easy_setopt(curl,CURLOPT_URL,u.get_url().c_str());
 	curl_easy_setopt(curl,CURLOPT_HTTPGET,1L);
 	curl_easy_setopt(curl,CURLOPT_NOBODY,0L);
+	if(auto v=config["nanodistro"]["network"]["cacert"])
+		curl_easy_setopt(curl,CURLOPT_CAINFO,v.as<std::string>().c_str());
 	return perform(curl,&ctx);
 }
 
@@ -79,6 +82,8 @@ Json::Value request_get_json(const url&u){
 	curl_easy_setopt(curl,CURLOPT_URL,u.get_url().c_str());
 	curl_easy_setopt(curl,CURLOPT_HTTPGET,1L);
 	curl_easy_setopt(curl,CURLOPT_NOBODY,0L);
+	if(auto v=config["nanodistro"]["network"]["cacert"])
+		curl_easy_setopt(curl,CURLOPT_CAINFO,v.as<std::string>().c_str());
 	auto data=perform(curl,&ctx);
 	if(!reader.parse(data,json))
 		throw RuntimeError("failed to parse json: {}",reader.getFormattedErrorMessages());
@@ -105,6 +110,8 @@ Json::Value request_post_json(const url&u,const Json::Value&req){
 	curl_easy_setopt(curl,CURLOPT_POST,1L);
 	curl_easy_setopt(curl,CURLOPT_NOBODY,0L);
 	curl_easy_setopt(curl,CURLOPT_POSTFIELDS,reqs.c_str());
+	if(auto v=config["nanodistro"]["network"]["cacert"])
+		curl_easy_setopt(curl,CURLOPT_CAINFO,v.as<std::string>().c_str());
 	auto data=perform(curl,&ctx);
 	if(!reader.parse(data,json))
 		throw RuntimeError("failed to parse json: {}",reader.getFormattedErrorMessages());
