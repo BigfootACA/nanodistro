@@ -8,6 +8,10 @@
 void evdev_device::init_device(){
 	if(fd>=0)return;
 	if(path.empty())throw RuntimeError("device path is empty");
+	for(int i=0;i<100;i++){
+		if(fs_exists(path))break;
+		usleep(10000);
+	}
 	fd=open(path.c_str(),O_RDONLY|O_NONBLOCK|O_CLOEXEC);
 	if(fd<0)throw ErrnoError("failed to open {}",path);
 	char name[4096];
