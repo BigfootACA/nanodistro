@@ -87,6 +87,7 @@ void gadget_clean_all(){
 
 void mass_storage_config::clean(){
 	std::string tgt="/sys/kernel/config/target";
+	call_hook("on-pre-stop");
 	auto luns=path_join(tgt,"usb_gadget/naa.1234567890/tpgt_1/lun");
 	if(fs_exists(luns))fs_list_dir(luns,[&](auto name,auto dt){
 		if(dt!=DT_DIR||name[0]=='.')return true;
@@ -118,4 +119,5 @@ void mass_storage_config::clean(){
 	xrmdir(iblock.c_str());
 	xrmdir(pscsi.c_str());
 	gadget_clean("nanodistro");
+	call_hook("on-post-stop");
 }

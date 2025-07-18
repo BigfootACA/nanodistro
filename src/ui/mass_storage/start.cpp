@@ -6,6 +6,8 @@
 #include"str-utils.h"
 #include"path-utils.h"
 #include"modules.h"
+#include"configs.h"
+#include"process.h"
 
 static void xmkdir(const std::string&path,mode_t mode=0755){
 	log_debug("creating directory {}",path);
@@ -137,6 +139,7 @@ void mass_storage_config::apply(){
 	if(disks.empty())throw RuntimeError("no disks to mount");
 	if(udc.empty())throw RuntimeError("no UDC selected");
 	module_load("libcomposite");
+	call_hook("on-pre-start");
 	std::string cfs="/sys/kernel/config/usb_gadget";
 	if(!fs_exists(cfs))throw RuntimeError("usb gadget configfs is not available");
 	clean();
@@ -162,6 +165,7 @@ void mass_storage_config::apply(){
 		auto ocfg=path_join(os_desc,"a.1");
 		if(!fs_exists(ocfg))xsymlink(cfg,ocfg);
 	}
+	call_hook("on-start-storage");
 	std::list<std::string>rfuncs{};
 	switch(mode){
 		case STORAGE_MODE_UAS:rfuncs=apply_uas(this,gadget);break;
@@ -174,6 +178,26 @@ void mass_storage_config::apply(){
 		path_join(funcs,func),
 		path_join(cfg,func)
 	);
+	call_hook("on-pre-start-udc");
 	log_info("enable usb mass storage with {}",udc);
 	fs_write_all(path_join(gadget,"UDC"),udc+"\n");
+	call_hook("on-post-start");
+}
+
+void mass_storage_config::call_hook(const std::string&hook){
+	std::vector<std::string>hooks{};
+	if(auto v=config["nanodistro"]["gadget"][hook]){
+		if(v.IsSequence())
+			for(auto h:v)hooks.push_back(h.as<std::string>());
+		if(v.IsScalar())
+			hooks.push_back(v.as<std::string>());
+	}
+	if(hooks.empty())return;
+	for(auto&h:hooks){
+		log_info("calling gadget {} hook {}",hook,h);
+		process p{};
+		p.set_command(h);
+		p.start();
+		p.wait();
+	}
 }

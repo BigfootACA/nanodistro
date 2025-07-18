@@ -35,6 +35,7 @@ struct mass_storage_config{
 	void reset_disks();
 	void apply();
 	void clean();
+	void call_hook(const std::string&hook);
 };
 
 class ui_draw_mass_storage:public ui_draw{
