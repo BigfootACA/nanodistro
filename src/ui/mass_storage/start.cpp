@@ -147,6 +147,9 @@ void mass_storage_config::apply(){
 	mkdir(gadget.c_str(),0755);
 	fs_write_all(path_join(gadget,"idVendor"),"0x1D6B\n"); /* Linux Foundation */
 	fs_write_all(path_join(gadget,"idProduct"),"0x0104\n"); /* Multifunction Composite Gadget */
+	fs_write_all(path_join(gadget,"bDeviceClass"),"0xEF\n");
+	fs_write_all(path_join(gadget,"bDeviceSubClass"),"0x02\n");
+	fs_write_all(path_join(gadget,"bDeviceProtocol"),"0x01\n");
 	auto str=path_join(path_join(gadget,"strings"),"0x409");
 	xmkdir(str);
 	fs_write_all(path_join(str,"manufacturer"),"ClassFun\n");
