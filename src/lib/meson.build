@@ -17,6 +17,7 @@ nanodistro_lib_srcs = files([
 	'request.cpp',
 	'status.cpp',
 	'strings.cpp',
+	'syslog.cpp',
 	'time.cpp',
 	'uevent.cpp',
 	'worker.cpp',

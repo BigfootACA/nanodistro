@@ -33,6 +33,7 @@ using log_print_hook=std::function<bool(log_level,const std::string&,const log_l
 using log_print_string_hook=std::function<bool(const std::string&)>;
 
 extern int log_init();
+extern int log_init_syslog();
 extern log_level log_level_from_string(const std::string&level);
 extern std::string log_level_to_string(log_level level);
 extern uint64_t log_add_print_hook(const log_print_hook&hook);

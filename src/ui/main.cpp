@@ -173,6 +173,7 @@ static int post_main(int argc,char**argv){
 	install_signal();
 	if(auto r=log_init())return r;
 	if(auto r=load_config(argc,argv))return r;
+	if(auto r=log_init_syslog())return r;
 	if(auto r=locale_init())return r;
 	if(auto r=lvgl_init())return r;
 	if(auto r=display_init())return r;
